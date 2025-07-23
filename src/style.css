@@ -1,0 +1,19 @@
+
+
+header h1{
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    color: darkslateblue;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: cornflowerblue;
+}
