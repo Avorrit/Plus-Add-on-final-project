@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
     <title>World Clock | Ghazal Jamali</title>
 </head>
@@ -16,31 +19,29 @@
     <div id="clock-container">
         <select name="city-selector" id="city-selector">
             <option value="" disabled selected hidden="hidden">Choose a city</option>
-            <option value="">London</option>
-            <option value="">Paris</option>
-            <option value="">Prague</option>
+            <option value="" id="london">London</option>
+            <option value="" id="paris">Paris</option>
+            <option value="" id="prague">Prague</option>
         </select>
-    </div>
 
     <div id="city-container-wrapper">
         <div class="city-container">
             <h2 class="city-name">Los Angeles 🇺🇸</h2>
             <div class="city-details">
-            <div class="city-date">August 15th 2022</div>
-            <div class="city-time">1:48:15 AM</div>
+                <div class="city-time">1:48:15 AM</div>
+                <div class="city-date">August 15th 2022</div>
             </div>
         </div>
     </div>
-
+<hr/>
     <div class="city-container">
         <h2 class="city-name">Sydney 🇦🇺</h2>
         <div class="city-details">
-            <div class="city-date">August 15th 2022</div>
             <div class="city-time">1:48:15 AM</div>
+            <div class="city-date">August 15th 2022</div>
         </div>
     </div>
     </div>
-
 </main>
 
 <footer>
