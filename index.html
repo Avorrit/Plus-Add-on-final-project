@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css">
-  <title>World Clock | Ghazal Jamali</title>
+    <title>World Clock | Ghazal Jamali</title>
 </head>
 <body>
 <header>
@@ -13,12 +13,40 @@
 </header>
 
 <main>
-    <div id="clock"></div>
+    <div id="clock-container">
+        <select name="city-selector" id="city-selector">
+            <option value="" disabled selected hidden="hidden">Choose a city</option>
+            <option value="">London</option>
+            <option value="">Paris</option>
+            <option value="">Prague</option>
+        </select>
+    </div>
+
+    <div id="city-container-wrapper">
+        <div class="city-container">
+            <h2 class="city-name">Los Angeles 🇺🇸</h2>
+            <div class="city-details">
+            <div class="city-date">August 15th 2022</div>
+            <div class="city-time">1:48:15 AM</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="city-container">
+        <h2 class="city-name">Sydney 🇦🇺</h2>
+        <div class="city-details">
+            <div class="city-date">August 15th 2022</div>
+            <div class="city-time">1:48:15 AM</div>
+        </div>
+    </div>
+    </div>
+
 </main>
 
 <footer>
     <p>
-        This project is coded with 💖 by Ghazal Jamali and <a href="https://github.com/avorrit">open sourced on github</a>
+        This project is coded with 💖 by Ghazal Jamali and <a href="https://github.com/avorrit">open sourced on
+        GitHub</a>
     </p>
 </footer>
 
