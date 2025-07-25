@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01c3a44f-6d6d-45d5-b091-e3b16838e9a8" name="Changes" comment="added css styling">
+    <list default="true" id="01c3a44f-6d6d-45d5-b091-e3b16838e9a8" name="Changes" comment="changed styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1753289319727</updated>
       <workItem from="1753289320806" duration="7778000" />
-      <workItem from="1753461982873" duration="2779000" />
+      <workItem from="1753461982873" duration="3116000" />
     </task>
     <task id="LOCAL-00001" summary="changed link's color">
       <option name="closed" value="true" />
@@ -104,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753297055352</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed styling">
+      <option name="closed" value="true" />
+      <created>1753465010261</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1753465010261</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +120,7 @@
     <MESSAGE value="changed link's color" />
     <MESSAGE value="added basic html" />
     <MESSAGE value="added css styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="added css styling" />
+    <MESSAGE value="changed styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed styling" />
   </component>
 </project>
