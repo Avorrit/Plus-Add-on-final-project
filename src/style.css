@@ -1,11 +1,12 @@
 
 :root {
-    --primary-color: #E5E0D8;
-    --secondary-color: #F8F8F8;
-    --tertiary-color: #D1A980;
-    --text-color: #2c3e50;
+    --primary-color: #77BEF0;
+    --secondary-color: #FFCB61;
+    --tertiary-color: #FF894F;
+    --fourth-color: #EA5B6F;
     --font-family-header: "Bungee Tint";
-    --font-family-body: "Outfit";
+    --font-family-body: "DM Sans";
+    --font-family-clock: "Outfit";
     --font-size-header: 6em;
     --font-size-clock: 5rem;
     --font-size-body: 1.4em;
@@ -18,7 +19,8 @@ html {
 }
 
 body {
-    background-color: var(--primary-color);
+    background: #FFCB61;
+    background: linear-gradient(270deg, rgba(255, 203, 97, 1) 34%, rgba(255, 137, 79, 1) 100%);
     padding: 20px;
 }
 
@@ -29,13 +31,21 @@ header h1{
     margin: 20px auto 20px auto;
 }
 
+#main-frame {
+    padding: 20px;
+    background-color: var(--primary-color);
+    max-width: 720px;
+    margin: 10px auto 3px;
+    border-radius: 10px;
+}
+
 #clock-container {
     padding: 30px;
     height: fit-content;
     max-width: 700px;
-    margin: 10px auto 3px;
-    background-color: var(--secondary-color);
+    background-color: whitesmoke;
     border-radius: 10px;
+    margin: auto;
 
     font-family: var(--font-family-body), sans-serif;
     font-size: var(--font-size-body);
@@ -58,12 +68,21 @@ hr {
 
 .city-time {
     font-size: var(--font-size-clock);
+    font-family: var(--font-family-clock), sans-serif;
 }
 .city-name {
-    font-size: 3rem;
+    font-size: 3.4rem;
+    font-weight: 900;
+    margin: 1rem 1rem 1rem 0;
 }
 .city-date {
     font-size: var(--font-size-body);
+}
+
+.city-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .city-container {
@@ -84,7 +103,7 @@ footer {
 }
 
 footer a {
-    color: cadetblue;
+    color: #a1424f;
     text-decoration: none;
 }
 

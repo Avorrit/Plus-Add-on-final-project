@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01c3a44f-6d6d-45d5-b091-e3b16838e9a8" name="Changes" comment="added basic html">
+    <list default="true" id="01c3a44f-6d6d-45d5-b091-e3b16838e9a8" name="Changes" comment="added css styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
@@ -26,21 +26,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Avorrit"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Avorrit&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Avorrit/Plus-Add-on-final-project.git",
-    "accountId": "8ac148c0-b701-4e9e-ab53-47a375b95c4d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Avorrit/Plus-Add-on-final-project.git&quot;,
+    &quot;accountId&quot;: &quot;8ac148c0-b701-4e9e-ab53-47a375b95c4d&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="30HfG6FJzanHiaz8a0z3SMlz1mR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,6 +51,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "list.type.of.created.stylesheet": "CSS",
@@ -76,7 +77,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753289319727</updated>
-      <workItem from="1753289320806" duration="7635000" />
+      <workItem from="1753289320806" duration="7778000" />
+      <workItem from="1753461982873" duration="2779000" />
     </task>
     <task id="LOCAL-00001" summary="changed link's color">
       <option name="closed" value="true" />
@@ -94,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753292057761</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added css styling">
+      <option name="closed" value="true" />
+      <created>1753297055352</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1753297055352</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +113,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changed link's color" />
     <MESSAGE value="added basic html" />
-    <option name="LAST_COMMIT_MESSAGE" value="added basic html" />
+    <MESSAGE value="added css styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="added css styling" />
   </component>
 </project>
