@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.6.0/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock | Ghazal Jamali</title>
 </head>
 <body>
@@ -26,7 +30,7 @@
         </select>
 
     <div id="city-container-wrapper">
-        <div class="city-container">
+        <div class="city-container" id="los-angeles">
             <div class="city-details">
                 <h2 class="city-name">Los Angeles 🇺🇸</h2>
                 <div class="city-date">August 15th 2022</div>
@@ -35,7 +39,7 @@
         </div>
     </div>
 <hr/>
-    <div class="city-container">
+    <div class="city-container" id="sydney">
         <div class="city-details">
             <h2 class="city-name">Sydney 🇦🇺</h2>
             <div class="city-date">August 15th 2022</div>
