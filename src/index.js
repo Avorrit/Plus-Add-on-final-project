@@ -1,4 +1,6 @@
-let clockElementsId = ["los-angeles", "sydney"];
+
+const defaultClockID = ["current", "los-angeles", "sydney"];
+let clockElementsId = ["current", "los-angeles", "sydney"];
 
 
 const timeZoneMap = {
@@ -9,6 +11,26 @@ const timeZoneMap = {
     'prague': 'Europe/Prague'
 };
 
+function updateCurrentTime(){
+    const currentElement = document.getElementById("current");
+    const timezone = moment.tz.guess();
+
+    let currentCityName = timezone.split("/")[1].replace("_", " ");
+    console.log(currentCityName);
+
+    let currentDate = moment().tz(timezone).format("MMMM Do YYYY");
+    let currentTime = moment().tz(timezone).format(`h:mm:ss [<small>]A[</small>]`);
+
+    let nameElement = currentElement.querySelector(".city-name");
+    let timeElement = currentElement.querySelector(".city-time");
+    let dateElement = currentElement.querySelector(".city-date");
+
+
+    nameElement.innerHTML = currentCityName;
+    timeElement.innerHTML = currentTime;
+    dateElement.innerHTML = currentDate;
+}
+
 function updateTime(cityElement) {
 
     if (!cityElement) {
@@ -17,8 +39,14 @@ function updateTime(cityElement) {
     }
 
     const cityId = cityElement.id;
+    let cityTimezone = timeZoneMap[cityId];
 
-    const cityTimezone = timeZoneMap[cityId];
+
+    if (cityId === "current") {
+        updateCurrentTime();
+        return;
+    }
+
 
     let dateElement = cityElement.querySelector('.city-details .city-date');
     let timeElement = cityElement.querySelector('.city-time');
@@ -48,22 +76,7 @@ function updateCity(event){
     let selectElement = event.target;
     const cityId = selectElement.value;
 
-    if (clockElementsId.includes(cityId) && cityId.length > 0){
-        const existingCity = document.getElementById(cityId);
-
-
-        if(existingCity) {
-            const prevHr = existingCity.previousElementSibling;
-            if(prevHr && prevHr.tagName === "HR") {
-                prevHr.remove();
-            }
-            existingCity.remove();
-            clockElementsId = clockElementsId.filter(id => id !== cityId);
-            console.log(clockElementsId);
-        }
-    }
-
-    else {
+    if (!clockElementsId.includes(cityId) && cityId.length > 0){
         optionText = selectElement.options[selectElement.selectedIndex].text;
         console.log(optionText);
         addCity(cityId, optionText);
@@ -92,6 +105,28 @@ function addCity(cityId, cityFullName) {
     updateTime(cityContainer);
 }
 
+function resetClockContainer(){
+    clockElementsId.forEach(clockId => {
+        if (!defaultClockID.includes(clockId)) {
+            const element = document.getElementById(clockId);
+
+            if (element) {
+                const previousHr = element.previousElementSibling;
+                if (previousHr && previousHr.tagName === "HR") {
+                    previousHr.remove();
+                }
+
+                element.remove();
+            }
+        }
+    });
+
+    clockElementsId = defaultClockID.slice();
+}
+
+function toggleDarkMode(){
+    document.body.classList.toggle('dark');
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     updateAllClocks();
@@ -99,3 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateAllClocks();
     setInterval(updateAllClocks, 1000);
 });
+
+let darkModeBtn = document.querySelector('#dark-mode-btn');
+darkModeBtn.addEventListener("click", toggleDarkMode);
+
+let resetBtn = document.querySelector('#reset-btn');
+resetBtn.addEventListener("click", resetClockContainer);

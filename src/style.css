@@ -4,13 +4,20 @@
     --secondary-color: #FFCB61;
     --tertiary-color: #FF894F;
     --fourth-color: #EA5B6F;
+
+    --dark-primary-color: #070F2B;
+    --dark-secondary-color: #1B1A55;
+    --dark-tertiary-color: #535C91;
+    --dark-fourth-color: #9290C3;
+
+    --text-color: black;
     --font-family-header: "Bungee Tint";
     --font-family-body: "DM Sans";
     --font-family-clock: "Outfit";
     --font-size-header: 6em;
     --font-size-clock: 5rem;
     --font-size-body: 1.4em;
-    --font-size-footer: 1.5em;
+    --font-size-footer: 1.65em;
 
 }
 
@@ -19,9 +26,62 @@ html {
 }
 
 body {
-    background: #FFCB61;
-    background: linear-gradient(270deg, rgba(255, 203, 97, 1) 34%, rgba(255, 137, 79, 1) 100%);
+    background: var(--secondary-color);
+    background: linear-gradient(270deg, var(--secondary-color) 34%, var(--tertiary-color) 100%);
     padding: 20px;
+}
+
+
+body.dark {
+    --primary-color: #070F2B;
+    --secondary-color: #1B1A55;
+    --tertiary-color: #535C91;
+    --fourth-color: #9290C3;
+
+
+    --dark-primary-color: #77BEF0;
+    --dark-secondary-color: #FFCB61;
+    --dark-tertiary-color: #FF894F;
+    --dark-fourth-color: #EA5B6F;
+
+    --text-color: white;
+}
+
+body.dark #dark-mode-btn #moon-icon {
+    display: none;
+}
+
+body.dark #dark-mode-btn #sun-icon {
+    display: inherit;
+}
+
+body.dark #dark-mode-btn {
+    padding: 5px 5px 5px 20px;
+}
+
+body.dark #dark-mode-btn:hover {
+    background: var(--dark-secondary-color);
+}
+
+body.dark #dark-mode-btn:hover #sun-icon path {
+    fill: var(--dark-fourth-color);
+}
+
+body.dark #main-frame {
+    box-shadow: rgba(24, 30, 30, 0.34) 12px 12px 12px;
+}
+
+body.dark #clock-container {
+    background-color: var(--secondary-color);
+}
+
+body.dark #clock-container {
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+body.dark #reset-btn:hover #erase-icon path{
+    fill: var(--text-color);
 }
 
 header h1{
@@ -37,6 +97,68 @@ header h1{
     max-width: 720px;
     margin: 10px auto 3px;
     border-radius: 10px;
+    box-shadow: rgba(119, 136, 153, 0.34) 12px 12px 12px;
+}
+
+
+#btn-section {
+    margin: 5px auto 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+#dark-mode-btn{
+    background-color: var(--dark-primary-color);
+    display: flex;
+    width: fit-content;
+    padding: 5px 20px 5px 5px;
+    border-radius: 35px;
+    border: none;
+}
+#dark-mode-btn:hover{
+    cursor: pointer;
+    transition: all ease 0.3s;
+    background-color: var(--dark-fourth-color);
+    color: #070F2B;
+}
+
+#dark-mode-btn:hover #moon-icon path{
+    fill: #070F2B;
+    transition: fill 0.3s ease;
+}
+
+#moon-icon {
+    transform: rotate(340deg);
+    width:  3rem;
+}
+
+#sun-icon {
+    width: 3rem;
+}
+
+
+#reset-btn {
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 3px 10px 3px 10px;
+}
+
+#reset-btn #erase-icon {
+    width: 3rem;
+}
+
+#reset-btn:hover {
+    cursor: pointer;
+    transition: all ease 0.3s;
+    background-color: var(--tertiary-color);
+}
+
+#reset-btn:hover #erase-icon {
+    fill: white;
 }
 
 #clock-container {
@@ -50,6 +172,7 @@ header h1{
     font-family: var(--font-family-body), sans-serif;
     font-size: var(--font-size-body);
 }
+
 
 #city-selector {
     display: block;
@@ -99,15 +222,15 @@ footer {
     text-align: center;
     font-size: var(--font-size-footer);
     font-family: var(--font-family-body), sans-serif;
-
+    color: var(--text-color);
 }
 
 footer a {
-    color: #a1424f;
+    color: var(--fourth-color);
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: darkcyan;
+    color: var(--dark-fourth-color);
 }
